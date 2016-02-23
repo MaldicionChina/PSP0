@@ -26,6 +26,7 @@ add_library(node SHARED ${SOURCE}/Node.cpp)
 
 set(linkedList_SRC ${INCLUDE}/LinkedList.hpp})
 add_library(linkedList SHARED ${SOURCE}/LinkedList.cpp)
+target_link_libraries(linkedList node)
 
 
 ##########################################
@@ -37,3 +38,4 @@ add_subdirectory(test)
 
 set(SOURCE_FILES ${SOURCE}/main.cpp)
 add_executable(PSP0 ${SOURCE_FILES})
+target_link_libraries(PSP0 linkedList)

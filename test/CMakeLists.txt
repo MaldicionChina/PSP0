@@ -32,4 +32,4 @@ include_directories("${source_dir}/include")
 set(SOURCE_FILES main.cpp LinkedListTest.cpp)
 add_executable(TEST ${SOURCE_FILES})
 
-target_link_libraries(TEST libgtest linkedList node pthread)
+target_link_libraries(TEST libgtest linkedList pthread)

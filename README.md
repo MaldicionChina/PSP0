@@ -2,14 +2,28 @@
 
 [ ![Codeship Status for MaldicionChina/PSP0](https://codeship.com/projects/428d7b70-bbff-0133-5c27-72d8958adba6/status?branch=master)](https://codeship.com/projects/136084)
 
-apt install libgtest-dev
 
-mkdir build
+Para compilar el proyecto ejecute los siguientes comandos
 
-cd build
+```mkdir build```
 
-cmake ..; make
+```cd build```
 
-./test/TEST
+```cmake ..; make```
 
-Alexis Rodríguez Gutiérrez
+Para correr las pruebas ejecute el siguiente comando
+
+```./test/TEST```
+
+ ![Test](./picRuningTest.jpg)
+
+
+Para correr el programa principal ejecute el siguiente comando
+
+```./PSP0```
+
+ ![Run Main Program](./picRuningMainProgram.jpg)
+
+-----
+
+####Alexis Rodríguez Gutiérrez
