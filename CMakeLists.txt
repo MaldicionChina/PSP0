@@ -21,7 +21,7 @@ include_directories(${INCLUDE})
 ######## Build libraries           #######
 ##########################################
 
-set(node_SRC ${INCLUDE}/Node.hpp)
+set(node ${INCLUDE}/Node.hpp)
 add_library(node SHARED ${SOURCE}/Node.cpp)
 
 set(linkedList_SRC ${INCLUDE}/LinkedList.hpp})

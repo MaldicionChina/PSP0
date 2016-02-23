@@ -10,10 +10,13 @@
 class LinkedList {
 public:
     LinkedList(); // Constructor Without parameters
-    Node* getHead();
+    void addData(double number); // Add new Node to the tail of the list
+    double popData(); // Return the last element
 
 private:
+    int totalNumbers;
     Node* head;
+    Node* temp;
 };
 
 
