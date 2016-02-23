@@ -39,7 +39,7 @@ double LinkedList::popData() {
 
     double valueToPop;
 
-    // If there're more than one Node ... tehn
+    // If there're more than one Node ... then
     if(this->head->getNextNode() != nullptr) {
         this->temp = this->head; // Assign 'temp' = 'head' to go over the last element of the list
 
@@ -54,6 +54,35 @@ double LinkedList::popData() {
         valueToPop = this->head->getData();
         this->head = nullptr;
     }
-
     return  valueToPop;
+}
+
+double LinkedList::getMean() {
+
+    this->temp = this->head;
+    double sumAllNumbers;
+    totalNodes = 0;
+
+    while(this->temp != nullptr){
+        sumAllNumbers = sumAllNumbers + this->temp->getData();
+        totalNodes = totalNodes + 1;
+        this->temp = this->temp->getNextNode();
+    }
+
+    return sumAllNumbers/totalNodes;
+}
+
+double LinkedList::getVariance() {
+
+    double mean = this->getMean();
+    this->temp = this->head;
+    double internalSum = 0;
+    totalNodes = 0;
+
+    while(this->temp != nullptr){
+        internalSum = internalSum + pow((this->temp->getData() - mean),2);
+        totalNodes = totalNodes + 1;
+        this->temp = this->temp->getNextNode();
+    }
+    return sqrt(internalSum/(totalNodes-1));
 }
