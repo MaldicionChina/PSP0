@@ -6,8 +6,11 @@ include(ExternalProject)
 # Command to build gtest libraries
 ExternalProject_Add(
         gtest
-        URL /usr/src/gtest
-        BINARY_DIR gtest
+#        Changed to download the zip because codeship doesn't allows install debian packages
+#        URL /usr/src/gtest
+#        BINARY_DIR gtest
+        URL https://googletest.googlecode.com/files/gtest-1.7.0.zip
+        PREFIX ${CMAKE_CURRENT_BINARY_DIR}/gtest
 # Disable install step
         INSTALL_COMMAND ""
 )
